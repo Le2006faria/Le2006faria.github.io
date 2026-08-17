@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letícia Faria — Análise de Dados</title>
+<meta name="description" content="Portfólio de Letícia Faria — análise de dados, relatórios financeiros e automação para carteiras de crédito e cobrança.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER / HERO ================= -->
+<header class="masthead">
+  <div class="masthead__topbar">
+    <span class="mono-tag">RELATÓRIO · PORTFÓLIO</span>
+    <span class="mono-tag mono-tag--right">ATUALIZADO · 2026</span>
+  </div>
+
+  <div class="masthead__body">
+    <div class="masthead__mark" aria-hidden="true">LF</div>
+
+    <div class="masthead__info">
+      <p class="eyebrow">Análise de Dados</p>
+      <h1>Letícia Faria</h1>
+      <p class="masthead__pitch">
+        Transformo planilhas cruas, bancos de dados e rotinas manuais em relatórios,
+        dashboards e automações que sustentam decisões de crédito e cobrança —
+        do SQL ao Power BI, passando por Python.
+      </p>
+
+      <ul class="masthead__meta">
+        <li><span class="meta-label">Local</span> Ribeirão Preto / Sertãozinho — SP</li>
+        <li><span class="meta-label">Formação</span> FATEC RP · Análise e Desenv. de Sistemas <em>(previsão dez/2027)</em></li>
+        <li><span class="meta-label">Atuação atual</span> Estagiária de Análise de Dados — Eos Financiamentos</li>
+      </ul>
+
+      <div class="masthead__contacts">
+        <a href="mailto:leticiaferreirafaria02@gmail.com">E-mail</a>
+        <a href="https://www.linkedin.com/in/let%C3%ADcia-ferreira-faria-a6bb15309/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Le2006faria" target="_blank" rel="noopener">GitHub</a>
+        <a href="tel:+5516991008439">(16) 99100-8439</a>
+      </div>
+    </div>
+
+    <div class="masthead__photo">
+      <img src="assets/profile/leticia.jpg" alt="Retrato de Letícia Faria">
+    </div>
+  </div>
+
+  <div class="masthead__gold"></div>
+</header>
+
+<!-- ================= INTRO DO PORTFÓLIO ================= -->
+<section class="intro">
+  <p>
+    As imagens a seguir são recortes reais de relatórios, planilhas e queries que desenvolvo
+    no meu dia a dia — números, nomes e valores foram <strong>bloqueados propositalmente</strong>
+    por sigilo comercial (a mesma prática de confidencialidade que aplico nos relatórios entregues
+    à empresa). O que importa aqui é a <strong>estrutura, a lógica e o raciocínio</strong> por trás de cada peça.
+  </p>
+</section>
+
+<!-- ================= GALERIA CENTRAL ================= -->
+<main class="gallery">
+
+  <!-- MÓDULO 01 -->
+  <section class="module" id="carteira">
+    <div class="module__header">
+      <span class="module__index">MÓDULO 01</span>
+      <h2>Carteira, Inadimplência &amp; PDD</h2>
+      <p class="module__desc">Consolidação da carteira de crédito por classe de atraso e cálculo de provisão para devedores duvidosos (PDD), unificando quatro fundos de investimento diferentes.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <a class="card__img" href="assets/img/carteira/carteira-geral.png" target="_blank" rel="noopener">
+          <img src="assets/img/carteira/carteira-geral.png" alt="Tabela Carteira Geral por classe de atraso, com carteira ativa, parcelas vencidas, carteira PDD e meta de risco">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">CARTEIRA GERAL</span>
+          <h3>Posição da carteira por faixa de atraso</h3>
+          <p>Visão consolidada da carteira ativa cruzando quantidade de clientes, saldo em aberto, parcelas vencidas e carteira PDD por faixa (Sem atraso até 180D+), com meta e realizado de provisão lado a lado.</p>
+          <p class="card__why"><span>Por que importa</span> É o ponto de partida de qualquer decisão de cobrança: mostra onde o risco está concentrado antes de qualquer ação.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/carteira/painel-fundos.png" target="_blank" rel="noopener">
+          <img src="assets/img/carteira/painel-fundos.png" alt="Excel com Power Query mostrando seis blocos de carteira: Eos Fundo 1, Eos Fundo 2, Consolidado, Travessia Geral, Travessia Não Legado e Inco">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">PAINEL POR FUNDO</span>
+          <h3>Consolidação multi-fundo via Power Query</h3>
+          <p>Um único modelo de dados alimenta seis recortes de carteira simultâneos — Eos Fundo 1, Fundo 2, Consolidado, Travessia (Legado/Não Legado) e Inco — a partir de uma única query carregada do banco.</p>
+          <p class="card__why"><span>Por que importa</span> Evita retrabalho: qualquer correção na base atualiza todos os fundos de uma vez, mantendo os números sempre batidos entre si.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/carteira/gestao-cobranca.png" target="_blank" rel="noopener">
+          <img src="assets/img/carteira/gestao-cobranca.png" alt="Painel de gestão de cobrança comparando posição de 5ª semana de julho com 1ª semana de agosto">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">GESTÃO SEMANAL</span>
+          <h3>Variação semana a semana do risco</h3>
+          <p>Comparativo automático entre duas semanas fechadas: carteira ativa, % em risco e quantidade de clientes em risco, com a variação percentual calculada célula a célula.</p>
+          <p class="card__why"><span>Por que importa</span> Permite à gestão enxergar em segundos se a carteira está piorando ou melhorando, sem abrir a base bruta.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/carteira/posicao-semanal.png" target="_blank" rel="noopener">
+          <img src="assets/img/carteira/posicao-semanal.png" alt="Tabela Posição Atual por Classe de Atraso da Carteira Geral, com meta e realizado de PDD">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">POSIÇÃO ATUAL</span>
+          <h3>Carteira geral consolidada semanal</h3>
+          <p>Mesma lógica da carteira geral, mas na cadência semanal e somando os seis recortes de fundo em uma única aba de fechamento (<em>conTotal</em>), pronta para a reunião de gestão.</p>
+          <p class="card__why"><span>Por que importa</span> É o número que efetivamente vai para a reunião — precisa estar 100% conferido antes de chegar à liderança.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/carteira/alinhamento-pdd.png" target="_blank" rel="noopener">
+          <img src="assets/img/carteira/alinhamento-pdd.png" alt="Tabela de alinhamento de PDD entre quatro carteiras: Fundo 1, Fundo 2, Travessia e Inco, com faixas de atraso e percentuais próprios">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">REGRAS DE PROVISÃO</span>
+          <h3>Alinhamento de PDD entre carteiras</h3>
+          <p>Cada fundo tem sua própria régua de faixas de atraso e percentual de provisão. Este documento centraliza as quatro réguas para garantir que todas as planilhas apliquem exatamente a mesma regra vigente.</p>
+          <p class="card__why"><span>Por que importa</span> Uma régua desalinhada gera provisão incorreta — este é o "documento-fonte" que evita divergência entre carteiras.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/carteira/tabela-pesos.png" target="_blank" rel="noopener">
+          <img src="assets/img/carteira/tabela-pesos.png" alt="Tabela auxiliar relacionando cada dia de atraso a um peso de 1 a 9">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">TABELA AUXILIAR</span>
+          <h3>Peso por dia de atraso</h3>
+          <p>Tabela de apoio (<code>PROCV</code>) que converte cada dia corrido de atraso em um peso de severidade, usado depois para escolher qual título "manda" na deduplicação de registros de um mesmo cliente.</p>
+          <p class="card__why"><span>Por que importa</span> Sem essa régua de prioridade, um título quitado poderia mascarar um título vencido do mesmo cliente na base.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/carteira/formula-dedup.png" target="_blank" rel="noopener">
+          <img src="assets/img/carteira/formula-dedup.png" alt="Fórmula extensa em Excel combinando SE, MÁXIMOSES e CONT.SES para marcar cada título como Manter ou Duplicado">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">FÓRMULA</span>
+          <h3>Deduplicação de títulos por cliente</h3>
+          <p>Fórmula combinando <code>SE</code>, <code>MÁXIMOSES</code> e <code>CONT.SES</code> para, entre vários títulos do mesmo cliente, decidir qual é o "vigente" (Manter) e quais devem ser ignorados na análise (Duplicado), priorizando status Vencido/Cancelado sobre A Vencer.</p>
+          <p class="card__why"><span>Por que importa</span> É a base técnica que impede que um cliente seja contado mais de uma vez na carteira, distorcendo saldo e inadimplência.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/carteira/acumulado-faixa.png" target="_blank" rel="noopener">
+          <img src="assets/img/carteira/acumulado-faixa.png" alt="Planilha com colunas de qtd pessoa, porcentagem, carteira ativa, PDD, valor vencido e multa e juros por faixa de atraso">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">AGREGAÇÃO</span>
+          <h3>Acumulado por faixa com SOMASES</h3>
+          <p>A partir da base de títulos já deduplicada, agrega quantidade de pessoas, carteira ativa, PDD e receita de multa/juros por faixa de atraso, usando <code>SOMASES</code> cruzando múltiplas condições de status e data.</p>
+          <p class="card__why"><span>Por que importa</span> Transforma dados linha a linha em indicadores gerenciais prontos para gráfico e reunião.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/carteira/a-receber-pago.png" target="_blank" rel="noopener">
+          <img src="assets/img/carteira/a-receber-pago.png" alt="Tabela comparando valor a receber, valor pago e diferença mês a mês, com detalhamento por mês de pagamento">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">A RECEBER × PAGO</span>
+          <h3>Conciliação de recebíveis por mês</h3>
+          <p>Cruza o previsto de cada mês com o efetivamente pago — inclusive pagamentos que "vazam" para meses seguintes — usando <code>SOMASES</code> com intervalos de data para fechar a diferença.</p>
+          <p class="card__why"><span>Por que importa</span> Mostra se o atraso está em quem paga com atraso dentro do próprio mês, ou se a inadimplência está realmente crescendo.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MÓDULO 02 -->
+  <section class="module" id="safra">
+    <div class="module__header">
+      <span class="module__index">MÓDULO 02</span>
+      <h2>Safra (Vintage), Roll Rates &amp; Cure Rate</h2>
+      <p class="module__desc">As três métricas clássicas de risco de crédito, construídas do zero em um único relatório: como cada leva de contratos amadurece, para onde a inadimplência migra e o quanto dela se recupera.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <a class="card__img" href="assets/img/safra/abas-relatorio.png" target="_blank" rel="noopener">
+          <img src="assets/img/safra/abas-relatorio.png" alt="Excel Eos_Relatorio_Cobranca com abas Diária, Semanal, Mensal, MêsPassado, Safra (Vintage), Roll Rates e Cure Rate">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">VISÃO GERAL</span>
+          <h3>O relatório "Eos_Relatorio_Cobranca"</h3>
+          <p>Estrutura do arquivo que reúne todas as cadências de cobrança em um só lugar: Diária, Semanal, Mensal, Mês Passado e as três análises de risco — Safra, Roll Rates e Cure Rate — como abas de um mesmo modelo.</p>
+          <p class="card__why"><span>Por que importa</span> É o "hub" de reporting de cobrança: um único arquivo que substitui dezenas de planilhas soltas.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/safra/safra-vintage.png" target="_blank" rel="noopener">
+          <img src="assets/img/safra/safra-vintage.png" alt="Triângulo de safras mostrando o percentual de cada leva de contratos em 90+ dias de atraso por mês de originação (MOB)">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">SAFRA (VINTAGE)</span>
+          <h3>Triângulo de maturação de safras</h3>
+          <p>Cada linha é uma "safra" (mês de originação); cada coluna é o MOB (mês desde a originação). As células mostram o % da safra em 90+ dias de atraso, com escala de cor de verde a vermelho conforme piora.</p>
+          <p class="card__why"><span>Por que importa</span> Permite comparar se contratos originados hoje estão nascendo mais saudáveis ou mais arriscados do que os de meses anteriores — não dá para ver isso olhando só a carteira total.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/safra/roll-rates.png" target="_blank" rel="noopener">
+          <img src="assets/img/safra/roll-rates.png" alt="Matriz de transição de Roll Rates mostrando o percentual de saldo que migra de uma faixa de atraso para outra de um mês para o seguinte">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">ROLL RATES</span>
+          <h3>Matriz de transição entre faixas</h3>
+          <p>Matriz "DE → PARA": cada linha soma 100% e mostra para onde o saldo daquela faixa de atraso migrou no mês seguinte — quanto curou, quanto piorou e quanto ficou estável. Uma coluna de conferência (<em>OK</em>) valida se cada linha realmente fecha em 100%.</p>
+          <p class="card__why"><span>Por que importa</span> É o indicador que antecipa tendência: mostra se a cobrança está conseguindo conter a evolução do atraso antes que ele vire prejuízo.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/safra/cure-rate.png" target="_blank" rel="noopener">
+          <img src="assets/img/safra/cure-rate.png" alt="Tabela de Cure Rate por faixa mostrando saldo, quantidade de contas, valor curado, percentual de cura e days-to-cure">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">CURE RATE</span>
+          <h3>Taxa e velocidade de recuperação</h3>
+          <p>Por faixa de atraso: quanto do saldo foi regularizado no período (% de cura), em quantos dias em média isso aconteceu (days-to-cure) e a evolução mês a mês dessa taxa.</p>
+          <p class="card__why"><span>Por que importa</span> Mede a eficiência real da operação de cobrança — não basta saber quem está inadimplente, é preciso saber quem volta a pagar, e em quanto tempo.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MÓDULO 03 -->
+  <section class="module" id="bi">
+    <div class="module__header">
+      <span class="module__index">MÓDULO 03</span>
+      <h2>Relatórios de Reunião (Power BI)</h2>
+      <p class="module__desc">Apresentações geradas automaticamente para as reuniões diária, semanal e mensal do comercial — funil de propostas, build-up de fechamento e comparativo de metas.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/capa-reuniao.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/capa-reuniao.png" alt="Slide de capa da apresentação Reunião Diária Geral - Comercial, gerado automaticamente com a data do dia">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">CAPA AUTOMÁTICA</span>
+          <h3>Apresentação diária gerada por script</h3>
+          <p>Slide de abertura da reunião diária — a data é preenchida automaticamente pela rotina em Python que monta o PDF/apresentação todos os dias antes do horário da reunião.</p>
+          <p class="card__why"><span>Por que importa</span> Ninguém perde tempo montando slide manualmente; o time chega na reunião com o material já pronto na caixa de entrada.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/funil-mensal.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/funil-mensal.png" alt="Funil de propostas por etapa mensal: Originada, Pré-aprovada, Análise de Crédito, Aprovada, Formalização, Recebida, com taxas de conversão entre etapas">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">FUNIL DE PROPOSTAS</span>
+          <h3>Conversão etapa a etapa</h3>
+          <p>Do total de propostas originadas até a recebida, com o percentual de conversão calculado entre cada par de etapas consecutivas (Pré/Originada, Aprovada/Análise, etc).</p>
+          <p class="card__why"><span>Por que importa</span> Mostra exatamente em qual etapa do processo comercial as propostas estão sendo perdidas.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/funil-percentual.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/funil-percentual.png" alt="Variante do funil de propostas com foco nas taxas percentuais de conversão entre etapas">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">FUNIL — LEITURA %</span>
+          <h3>Mesmo funil, foco na taxa</h3>
+          <p>Recorte complementar do funil de propostas, priorizando a leitura em percentual de conversão ao invés do volume absoluto — usado para comparar meses com volumes bem diferentes entre si.</p>
+          <p class="card__why"><span>Por que importa</span> Volume absoluto engana quando o mês é sazonalmente mais fraco; taxa de conversão mostra a saúde real do processo.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/buildup-diario.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/buildup-diario.png" alt="Gráfico de build-up mostrando a projeção de fechamento do mês por etapa do funil, com quantidade de propostas em cada estágio">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">BUILD-UP</span>
+          <h3>Projeção de fechamento do mês</h3>
+          <p>Combina barras (valor por etapa) com uma linha (quantidade de propostas) para projetar o quanto do funil atual ainda vai se converter em receita até o fim do mês.</p>
+          <p class="card__why"><span>Por que importa</span> Dá visibilidade antecipada de meta batida ou não, permitindo à liderança agir antes do fechamento, não depois.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/mtd-meta.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/mtd-meta.png" alt="Painel MtD x Meta mostrando receita faltante, meta diária atual, propostas faltantes e dias úteis restantes">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">MTD × META</span>
+          <h3>Quanto falta para bater a meta</h3>
+          <p>Traduz a meta do mês em indicadores acionáveis para o dia a dia: receita faltante, meta diária recalculada, propostas faltantes e quantas aprovações/recebidas são necessárias por dia útil restante.</p>
+          <p class="card__why"><span>Por que importa</span> Transforma uma meta mensal abstrata em uma cota diária concreta que cada time consegue perseguir.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/performance-comparativa.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/performance-comparativa.png" alt="Gráficos comparando performance real de 2026 contra orçado e contra real de 2025, em quantidade e em valor">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">REAL × ORÇADO</span>
+          <h3>Performance comparativa anual</h3>
+          <p>Cruza o realizado do ano corrente com o orçado e com o mesmo período do ano anterior, tanto em quantidade de propostas quanto em valor financeiro, por etapa do funil.</p>
+          <p class="card__why"><span>Por que importa</span> Sem essa comparação tripla, um número "bom" isolado pode esconder uma queda real frente ao planejado.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/pulverizacao.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/pulverizacao.png" alt="Tabela de pulverização mensal por originador, com quantidade e valor originado, aprovado e recebido, e percentual de participação">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">PULVERIZAÇÃO</span>
+          <h3>Concentração de originação por parceiro</h3>
+          <p>Detalha, por originador, quanto foi originado, aprovado e recebido — e o quanto cada um representa do total (% pulv), evidenciando dependência de poucos parceiros.</p>
+          <p class="card__why"><span>Por que importa</span> Carteira muito concentrada em poucos originadores é um risco de negócio; esse indicador está sempre no radar da gestão comercial.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/buildup-mensal.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/buildup-mensal.png" alt="Gráfico de build-up mensal com séries base, growth e decline por etapa do funil, e tabela de crescimento por etapa">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">BUILD-UP MENSAL</span>
+          <h3>Projeção de fechamento — visão mês</h3>
+          <p>Versão mensal do build-up, separando o volume "base" já garantido do "growth" ainda pendente de conversão em cada etapa, até a Pré-aprovada.</p>
+          <p class="card__why"><span>Por que importa</span> Ajuda a liderança a diferenciar meta que já está praticamente garantida de meta que ainda depende de esforço adicional do time.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/ciclo-propostas.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/ciclo-propostas.png" alt="Gráfico de média de dias por status do funil comercial, do Em Andamento até a Efetivada">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">CICLO DE PROPOSTAS</span>
+          <h3>Tempo médio em cada etapa</h3>
+          <p>Calcula quantos dias, em média, uma proposta permanece em cada status até virar contrato efetivado — do "Em Andamento" até a "Efetivada".</p>
+          <p class="card__why"><span>Por que importa</span> Identifica gargalos operacionais: se uma etapa demora desproporcionalmente mais que as outras, é ali que o processo precisa de atenção.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/comparativo-originadores.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/comparativo-originadores.png" alt="Gráficos de área e barras comparando o número de originadores ativos dia a dia entre o mês atual e o anterior">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">MÊS × MÊS ANTERIOR</span>
+          <h3>Comparação diária de originadores ativos</h3>
+          <p>Sobrepõe, dia a dia, quantos originadores enviaram propostas no mês atual contra o mesmo dia do mês anterior — em formato de área e de barras lado a lado.</p>
+          <p class="card__why"><span>Por que importa</span> Mostra rapidamente se a base de parceiros ativos está crescendo ou encolhendo ao longo do mês, não só no total.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/resumo-fechamento.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/resumo-fechamento.png" alt="Resumo de fechamento comparando FY26, orçado e FY25 para Originada, Pré-aprovada, Recebida e Receita">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">RESUMO EXECUTIVO</span>
+          <h3>Fechamento do ano fiscal</h3>
+          <p>Painel de alto nível para diretoria: originação, pré-aprovação, recebidas e receita, sempre em três colunas — o realizado do ano, o orçado e o ano anterior.</p>
+          <p class="card__why"><span>Por que importa</span> É o slide que resume o ano inteiro em uma tela — precisa estar impecável, pois costuma ser o mais visto de toda a apresentação.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/evolucao-receita.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/evolucao-receita.png" alt="Gráfico combinando barras de quantidade de recebidas por mês com linha de receita total, de março de 2025 a junho de 2026">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">SÉRIE HISTÓRICA</span>
+          <h3>Receita × volume de recebidas</h3>
+          <p>Série de 16 meses cruzando volume de contratos recebidos (barras) com a receita total gerada (linha), permitindo ver se o crescimento de receita acompanha o crescimento de volume.</p>
+          <p class="card__why"><span>Por que importa</span> Receita pode crescer mesmo com volume estável (ticket médio maior) ou cair mesmo com volume crescente — só a série cruzada revela isso.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/bi/mais-menos-originadas.png" target="_blank" rel="noopener">
+          <img src="assets/img/bi/mais-menos-originadas.png" alt="Duas tabelas ranqueando os 10 originadores que mais cresceram e os 10 que mais caíram na comparação semanal">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">TOP 10 SEMANAL</span>
+          <h3>Maiores altas e quedas por originador</h3>
+          <p>Ranking automático dos 10 originadores que mais aumentaram e dos 10 que mais reduziram volume na semana, comparando originadas, aprovadas e recebidas com a semana anterior.</p>
+          <p class="card__why"><span>Por que importa</span> Direciona a ação comercial: quem caiu recebe contato de reativação, quem subiu vira case de replicação.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MÓDULO 04 -->
+  <section class="module" id="vendas">
+    <div class="module__header">
+      <span class="module__index">MÓDULO 04</span>
+      <h2>Vendas, Funil &amp; Originação</h2>
+      <p class="module__desc">Dashboards interativos em Power BI para acompanhamento comercial: funil por responsável, efetivação de propostas e ranking de originadores.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <a class="card__img" href="assets/img/vendas/vida-proposta.png" target="_blank" rel="noopener">
+          <img src="assets/img/vendas/vida-proposta.png" alt="Gráfico de média de dias por status com filtros de integrador, distribuidor, dia, mês e ano">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">CICLO DE VIDA</span>
+          <h3>Tempo de proposta por integrador/distribuidor</h3>
+          <p>Mede o tempo médio de cada etapa segmentado por integrador e distribuidor parceiro, com filtros interativos de período.</p>
+          <p class="card__why"><span>Por que importa</span> Nem todo atraso é da operação interna — às vezes o gargalo está do lado do parceiro comercial, e esse recorte torna isso visível.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/vendas/funil-por-data.png" target="_blank" rel="noopener">
+          <img src="assets/img/vendas/funil-por-data.png" alt="Funil de propostas por originador com filtro de intervalo de datas e seleção múltipla de originadores">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">FUNIL INTERATIVO</span>
+          <h3>Funil filtrável por período e originador</h3>
+          <p>Mesmo funil acumulado por etapa (Originada → Recebida), mas com slicer de intervalo de datas e seleção de originadores específicos para investigação pontual.</p>
+          <p class="card__why"><span>Por que importa</span> Permite ao gestor "entrar" no número — comparar dois períodos ou isolar um parceiro específico sem precisar de nova planilha.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/vendas/funil-por-responsavel.png" target="_blank" rel="noopener">
+          <img src="assets/img/vendas/funil-por-responsavel.png" alt="Mesmo funil de propostas, agora com filtro de responsável comercial">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">FUNIL POR PESSOA</span>
+          <h3>Funil segmentado por responsável comercial</h3>
+          <p>Variante do funil com filtro por responsável comercial, usada em reuniões individuais de performance e acompanhamento de carteira de clientes por vendedor.</p>
+          <p class="card__why"><span>Por que importa</span> Dá autonomia para cada responsável acompanhar sua própria carteira sem depender de um relatório manual.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/vendas/efetivadas-analitico.png" target="_blank" rel="noopener">
+          <img src="assets/img/vendas/efetivadas-analitico.png" alt="Gráficos de linha e bolha comparando status Pago e Recebida por mês">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">ANALÍTICO</span>
+          <h3>Pago × Recebida ao longo dos meses</h3>
+          <p>Compara a evolução mensal da receita média entre os status "Pago" e "Recebida", ajudando a entender o intervalo entre a efetivação comercial e o efetivo pagamento.</p>
+          <p class="card__why"><span>Por que importa</span> Um contrato "recebido" nem sempre significa dinheiro em caixa — esse gráfico expõe esse hiato.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/vendas/efetivadas-comparativo.png" target="_blank" rel="noopener">
+          <img src="assets/img/vendas/efetivadas-comparativo.png" alt="Gráfico de barras comparando contagem de status Pago e Recebida por mês, de janeiro a abril">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">COMPARATIVO MENSAL</span>
+          <h3>Volume de efetivadas mês a mês</h3>
+          <p>Quantidade de propostas em cada status por mês, lado a lado, para acompanhar a tendência de crescimento (ou queda) das efetivações ao longo do trimestre.</p>
+          <p class="card__why"><span>Por que importa</span> Visão rápida de sazonalidade — essencial para prever picos de trabalho no operacional de formalização.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/vendas/efetivadas-total.png" target="_blank" rel="noopener">
+          <img src="assets/img/vendas/efetivadas-total.png" alt="Painel com funil de status, KPIs de soma_plus, soma_retorno, soma_spread, valor financiado médio e receita total, com filtros de ano, status, mês e dia">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">PAINEL COMPLETO</span>
+          <h3>KPIs financeiros das propostas efetivadas</h3>
+          <p>Consolida contagem de status, funil de conversão Recebida/Pago e indicadores financeiros (spread, retorno, valor financiado médio, receita total) em um único painel filtrável.</p>
+          <p class="card__why"><span>Por que importa</span> Une a visão comercial (quantas propostas) com a visão financeira (quanto isso representa em receita) na mesma tela.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/vendas/ranking-originadores.png" target="_blank" rel="noopener">
+          <img src="assets/img/vendas/ranking-originadores.png" alt="Ranking de originadores aprovados pelo total de propostas nos últimos 60 dias, com totais gerais ao lado">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">RANKING 60 DIAS</span>
+          <h3>Originadores por volume de propostas</h3>
+          <p>Lista e ranqueia todos os originadores aprovados pelo volume de propostas enviadas nos últimos 60 dias, com total geral, total de originadores ativos e média por parceiro.</p>
+          <p class="card__why"><span>Por que importa</span> Base para decisões de relacionamento comercial: quem priorizar, quem reativar, quem reconhecer.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MÓDULO 05 -->
+  <section class="module" id="credito">
+    <div class="module__header">
+      <span class="module__index">MÓDULO 05</span>
+      <h2>Motor de Crédito &amp; Score</h2>
+      <p class="module__desc">Acompanhamento do funil de decisão automática de crédito — motivos de recusa, status por etapa do motor e a relação entre score e valor aprovado.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <a class="card__img" href="assets/img/credito/funil-motor.png" target="_blank" rel="noopener">
+          <img src="assets/img/credito/funil-motor.png" alt="Funil das propostas pelo status do motor de crédito: Serasa, Credit Scoring API, SCR, Tribunal de Justiça, Restrições Internas e Básicas">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">FUNIL DO MOTOR</span>
+          <h3>Onde as propostas são recusadas</h3>
+          <p>Mostra em qual verificação do motor de crédito (Serasa, SCR, Tribunal de Justiça, restrições internas, etc.) cada proposta é barrada, com contagem e percentual em relação ao total.</p>
+          <p class="card__why"><span>Por que importa</span> Identifica se a recusa está concentrada em risco de crédito real ou em regras internas que talvez precisem de ajuste.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/credito/status-propostas.png" target="_blank" rel="noopener">
+          <img src="assets/img/credito/status-propostas.png" alt="Gráfico de barras empilhadas com a somatória do status de cada proposta por mês: aprovada, cancelada, recusada, formalização, paga e recebida">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">STATUS MENSAL</span>
+          <h3>Distribuição de status por mês</h3>
+          <p>Visão empilhada de todos os status possíveis de uma proposta (aprovada, cancelada, recusada, em formalização, paga, recebida) mês a mês, com filtros de dia e mês.</p>
+          <p class="card__why"><span>Por que importa</span> Um único gráfico substitui a leitura manual de milhares de linhas de status na base bruta.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/credito/p123.png" target="_blank" rel="noopener">
+          <img src="assets/img/credito/p123.png" alt="Matriz P1/P2/P3 por parcela e momento (1º, 2º, 3º Mom) mostrando quantidade e percentual de atraso ao longo dos meses">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">MATRIZ P123</span>
+          <h3>Atraso nas primeiras parcelas por safra</h3>
+          <p>Acompanha o comportamento de pagamento das três primeiras parcelas (P1, P2, P3) de cada leva de contratos, momento a momento, sinalizando "N/A" quando o vencimento ainda não ocorreu.</p>
+          <p class="card__why"><span>Por que importa</span> Atraso já na primeira parcela é um dos sinais mais fortes de risco — esse painel permite agir cedo, antes que o contrato avance para faixas piores.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/credito/score-comparativo.png" target="_blank" rel="noopener">
+          <img src="assets/img/credito/score-comparativo.png" alt="Tabela comparando soma total de propostas por faixa de score de crédito, contra o valor das propostas">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">SCORE × VALOR</span>
+          <h3>Relação entre score e valor da proposta</h3>
+          <p>Cruza faixas de score de crédito com faixas de valor de proposta, mostrando estatísticas de score mínimo, médio e máximo por faixa, filtrável por período.</p>
+          <p class="card__why"><span>Por que importa</span> Ajuda a entender se propostas de maior valor têm perfil de crédito diferente das de menor valor — relevante para calibrar políticas de aprovação.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/credito/score-media.png" target="_blank" rel="noopener">
+          <img src="assets/img/credito/score-media.png" alt="Painel de média do score e valor das propostas, com contagem de status pré-aprovada e emitida">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">MÉDIA DE SCORE</span>
+          <h3>Score médio por etapa de decisão</h3>
+          <p>Estatísticas de score (mínimo, médio, máximo) segmentadas por status da proposta (pré-aprovada vs. emitida), com filtro de período.</p>
+          <p class="card__why"><span>Por que importa</span> Verifica se o score realmente diferencia quem avança no funil — um indicador de qualidade do próprio motor de decisão.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/credito/score-por-etapa.png" target="_blank" rel="noopener">
+          <img src="assets/img/credito/score-por-etapa.png" alt="Três tabelas comparando score médio e quantitativo por faixa nas etapas Originada, Pré-Aprovada e Recebida, mês a mês">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">SCORE POR ETAPA</span>
+          <h3>Evolução do score ao longo do funil</h3>
+          <p>Compara a distribuição de score (faixas &lt;549, 549–750, 750–1000) nas três etapas-chave do funil — Originada, Pré-aprovada e Recebida — mês a mês, tanto em média quanto em quantidade.</p>
+          <p class="card__why"><span>Por que importa</span> Mostra se o funil está "filtrando" corretamente perfis de menor score ao longo das etapas, validando a política de crédito na prática.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/credito/score-somatoria.png" target="_blank" rel="noopener">
+          <img src="assets/img/credito/score-somatoria.png" alt="Gráfico de barras horizontais com a somatória do status de cada proposta entre 15/09/2025 e 15/03/2026, separando emitida e pré-aprovada">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">SÉRIE SEMESTRAL</span>
+          <h3>Emitidas × pré-aprovadas em 6 meses</h3>
+          <p>Série histórica de seis meses comparando quantas propostas ficaram pré-aprovadas contra quantas efetivamente viraram contrato emitido.</p>
+          <p class="card__why"><span>Por que importa</span> Mede a taxa de conversão final do motor de crédito ao longo do tempo, não apenas em um recorte pontual.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MÓDULO 06 -->
+  <section class="module" id="sql-python">
+    <div class="module__header">
+      <span class="module__index">MÓDULO 06</span>
+      <h2>SQL, Automação Python &amp; Infraestrutura</h2>
+      <p class="module__desc">A camada que sustenta todos os relatórios acima: queries em PostgreSQL, rotinas Python que disparam e distribuem os relatórios automaticamente, e o gateway que conecta tudo ao Power BI.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <a class="card__img" href="assets/img/sql-python/sql-carteirizacao.png" target="_blank" rel="noopener">
+          <img src="assets/img/sql-python/sql-carteirizacao.png" alt="Query SQL no DBeaver com múltiplas CTEs para deduplicação, cálculo de peso e carteirização de títulos">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">POSTGRESQL</span>
+          <h3>Carteirização via CTEs encadeadas</h3>
+          <p>Query estruturada em CTEs sucessivas: deduplicação com <code>ROW_NUMBER() OVER (PARTITION BY...)</code>, cálculo de dias úteis com <code>EXTRACT(ISODOW)</code>, e regras de elegibilidade (atraso mínimo de 120 dias ou histórico de restrição) para compor a carteira final.</p>
+          <p class="card__why"><span>Por que importa</span> É a lógica que decide, na origem, quais títulos entram de fato na régua de cobrança — todo o resto do relatório depende dessa base estar correta.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/sql-python/sql-multi-cadencia.png" target="_blank" rel="noopener">
+          <img src="assets/img/sql-python/sql-multi-cadencia.png" alt="Query SQL usando CROSS JOIN com VALUES para gerar diária, semanal, mensal e mês passado em uma única execução, com classificação de faixa de atraso via CASE">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">MULTI-CADÊNCIA</span>
+          <h3>Diária, semanal e mensal em uma só query</h3>
+          <p>Em vez de quatro queries separadas, um <code>CROSS JOIN</code> contra uma lista de <code>VALUES</code> gera as quatro cadências (diária/semanal/mensal/mês passado) de uma vez, cada uma com sua própria janela de datas calculada dinamicamente a partir de <code>CURRENT_DATE</code>.</p>
+          <p class="card__why"><span>Por que importa</span> Reduz o tempo de execução e elimina o risco de as cadências ficarem com lógicas de data divergentes entre si.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/sql-python/sql-ranking-peso.png" target="_blank" rel="noopener">
+          <img src="assets/img/sql-python/sql-ranking-peso.png" alt="Query SQL com CASE WHEN em cascata de 13 níveis para ordenar registros por peso de severidade">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">RANKING POR PESO</span>
+          <h3>Ordenação por severidade com CASE em cascata</h3>
+          <p><code>SELECT DISTINCT ON</code> combinado com um <code>CASE WHEN</code> de treze níveis para ordenar registros do "pior" para o "melhor" cenário, replicando em SQL a mesma régua de peso usada nas planilhas de Excel.</p>
+          <p class="card__why"><span>Por que importa</span> Garante que banco de dados e planilha apliquem exatamente a mesma regra de priorização — evitando divergência entre a fonte e o relatório final.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/sql-python/python-vscode.png" target="_blank" rel="noopener">
+          <img src="assets/img/sql-python/python-vscode.png" alt="VS Code com o script diaria.py aberto, importando os módulos Selenium, win32com e bibliotecas de automação, além de constantes de configuração de caminho e e-mail">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">PYTHON</span>
+          <h3>Automação de ponta a ponta com Selenium</h3>
+          <p>Script que orquestra a atualização de dados no Excel via <code>win32com</code>, aciona o Power BI publicado com <code>Selenium</code> e organiza tudo por horários configuráveis — parte de um conjunto de três rotinas (diária, semanal, mensal).</p>
+          <p class="card__why"><span>Por que importa</span> Elimina a etapa manual mais sujeita a erro: "esquecer" de atualizar ou de enviar o relatório no horário certo.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/sql-python/python-envio-email.png" target="_blank" rel="noopener">
+          <img src="assets/img/sql-python/python-envio-email.png" alt="Caixa de entrada do Outlook mostrando e-mail com relatório diário oficial em PDF enviado automaticamente pelo script Python">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">ENTREGA AUTOMÁTICA</span>
+          <h3>Envio do relatório por e-mail</h3>
+          <p>Ao final da execução, o script gera o PDF do relatório diário e o envia automaticamente por e-mail para a lista de destinatários configurada, sem intervenção manual.</p>
+          <p class="card__why"><span>Por que importa</span> Fecha o ciclo: da atualização do dado bruto até a entrega final na caixa de entrada de quem precisa decidir com base nele.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/sql-python/python-arquivos.png" target="_blank" rel="noopener">
+          <img src="assets/img/sql-python/python-arquivos.png" alt="Explorador de arquivos com a pasta python contendo os scripts diaria.py, mensal.py e semanal.py">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">ORGANIZAÇÃO</span>
+          <h3>Três rotinas, uma estrutura</h3>
+          <p>Organização do projeto em três scripts espelhados por cadência (<code>diaria.py</code>, <code>semanal.py</code>, <code>mensal.py</code>), compartilhando a mesma lógica-base de atualização e envio.</p>
+          <p class="card__why"><span>Por que importa</span> Um projeto de automação só é sustentável se outra pessoa conseguir entender e dar manutenção nele — organização clara é parte da entrega.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/gateway/gateway-onpremises.png" target="_blank" rel="noopener">
+          <img src="assets/img/gateway/gateway-onpremises.png" alt="Painel do On-premises Data Gateway da Microsoft, mostrando status online e conectores para Power BI, Power Apps e Microsoft Fabric">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">INFRAESTRUTURA</span>
+          <h3>Gateway de dados on-premises</h3>
+          <p>Configuração e monitoramento do gateway que conecta o banco PostgreSQL de produção às ferramentas de nuvem (Power BI, Power Apps, Microsoft Fabric), mantendo os dados sempre atualizados nos dashboards.</p>
+          <p class="card__why"><span>Por que importa</span> Sem esse elo, nenhum dashboard em nuvem conseguiria enxergar o banco de dados interno — é a ponte entre os dois mundos.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MÓDULO 07 -->
+  <section class="module" id="travessia">
+    <div class="module__header">
+      <span class="module__index">MÓDULO 07</span>
+      <h2>Fundo Travessia — Excel</h2>
+      <p class="module__desc">Acompanhamento dedicado do fundo Travessia: originação mensal, status de título a título e conciliação de valores pagos.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <a class="card__img" href="assets/img/travessia/sf4-status.png" target="_blank" rel="noopener">
+          <img src="assets/img/travessia/sf4-status.png" alt="Tabela dinâmica com contagem de status do título (DUE, PAID, PROVISIONED) e gráfico de colunas 3D correspondente">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">SF4 · STATUS</span>
+          <h3>Contagem de status por tabela dinâmica</h3>
+          <p>Tabela dinâmica simples cruzando o total de propostas com o status do título (Due, Paid, Provisioned), com visualização em gráfico de colunas.</p>
+          <p class="card__why"><span>Por que importa</span> Mostra que, além de fórmulas complexas, domino também os recursos nativos do Excel para entregas rápidas quando é isso que o momento pede.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/travessia/originacoes-mes.png" target="_blank" rel="noopener">
+          <img src="assets/img/travessia/originacoes-mes.png" alt="Gráfico de barras com o número de originações por mês, de março de 2023 a agosto de 2026">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">SÉRIE HISTÓRICA</span>
+          <h3>Originações do fundo mês a mês</h3>
+          <p>Série completa desde o início do fundo até o mês corrente, mostrando a evolução do volume de contratos originados.</p>
+          <p class="card__why"><span>Por que importa</span> Contextualiza qualquer número do mês atual dentro da trajetória histórica completa do fundo.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/travessia/titulo-a-titulo.png" target="_blank" rel="noopener">
+          <img src="assets/img/travessia/titulo-a-titulo.png" alt="Planilha título a título do fundo Travessia Geral, com status, datas de emissão, vencimento e pagamento, valor da proposta e valor pago">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">GRANULAR</span>
+          <h3>Detalhe título a título</h3>
+          <p>Base analítica com um título por linha — status, datas de emissão/vencimento/pagamento, valor da proposta, valor pago e a diferença entre eles — organizada em abas por segmento (Legado/Não Legado).</p>
+          <p class="card__why"><span>Por que importa</span> É a camada mais granular do relatório: todo indicador agregado do fundo nasce, em última instância, dessa planilha.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/travessia/pago-grafico.png" target="_blank" rel="noopener">
+          <img src="assets/img/travessia/pago-grafico.png" alt="Gráfico de barras mostrando a quantidade de títulos pagos do fundo Travessia Geral por mês, de agosto de 2024 a agosto de 2026">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">PAGAS × MÊS</span>
+          <h3>Volume de títulos liquidados no tempo</h3>
+          <p>Visualização da quantidade de títulos efetivamente pagos mês a mês, a partir da base título a título, com a diferença entre valor pago e valor original ao lado.</p>
+          <p class="card__why"><span>Por que importa</span> Permite identificar se o ritmo de liquidação está acelerando junto com o crescimento da originação, ou ficando para trás.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__img" href="assets/img/travessia/travessia-nao-legada.png" target="_blank" rel="noopener">
+          <img src="assets/img/travessia/travessia-nao-legada.png" alt="Tabela com quantidade e valor de títulos por mês, e um resumo em JSON dos status Aberto, Baixado, Vencido e Liquidado por mês">
+        </a>
+        <div class="card__body">
+          <span class="card__ref">NÃO LEGADO</span>
+          <h3>Status agregado por mês (JSON)</h3>
+          <p>Resumo mensal de quantidade e valor de títulos, com uma coluna extra condensando em formato JSON a distribuição de status daquele mês — útil para consumo posterior por outras ferramentas.</p>
+          <p class="card__why"><span>Por que importa</span> Mostra a preocupação em deixar o dado pronto não só para leitura humana, mas também para integração com outros sistemas.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= EXPERIÊNCIA & FORMAÇÃO ================= -->
+<section class="ledger" id="experiencia">
+  <div class="ledger__col">
+    <h2 class="ledger__title">Experiência Profissional</h2>
+
+    <div class="ledger__row">
+      <div class="ledger__date">01/2026 —<br>atual</div>
+      <div class="ledger__content">
+        <h3>Estagiária de Análise de Dados</h3>
+        <p class="ledger__org">Eos Financiamentos</p>
+        <p>Produção de dashboards interativos e coleta de dados para tomada de decisão, com filtros, funis, gráficos e tabelas que transformam dados em insights. Desenvolvimento, coleta, limpeza e estruturação de dados (Data Cleaning), com foco na correção de dados nulos e corrompidos. Modelagem de dados em Power BI e Excel a partir de relacionamentos e conexões, incluindo desenvolvimento de medidas DAX.</p>
+      </div>
+    </div>
+
+    <div class="ledger__row">
+      <div class="ledger__date">01/2025 —<br>12/2025</div>
+      <div class="ledger__content">
+        <h3>Aprendiz</h3>
+        <p class="ledger__org">Seven Gel — Informática/Tecnologia</p>
+        <p>Suporte técnico de TI: atendimento ao usuário, manutenção de hardware, instalação de softwares, configuração de máquinas e apoio com planilhas e documentações. Desenvolvimento de projetos em Python com ferramentas de IA (Gemini) voltados à automação de atividades do cotidiano.</p>
+      </div>
+    </div>
+
+    <div class="ledger__row">
+      <div class="ledger__date">07/2024 —<br>12/2024</div>
+      <div class="ledger__content">
+        <h3>Estágio em Análise e Desenvolvimento de Sistemas</h3>
+        <p class="ledger__org">Oni Intelligence — Informática/Tecnologia</p>
+        <p>Implementação e consumo de APIs; conversão de sistema em PHP e MySQL de uma versão obsoleta (2004) para a versão atual (2024). Criação de executáveis e scripts automatizados para tarefas rotineiras e de verificação, com foco em segurança de dados.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ledger__col">
+    <h2 class="ledger__title">Formação Acadêmica</h2>
+
+    <div class="ledger__row">
+      <div class="ledger__date">02/2025 —<br>12/2027</div>
+      <div class="ledger__content">
+        <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+        <p class="ledger__org">FATEC — Faculdade de Tecnologia de Ribeirão Preto</p>
+        <p>Superior em andamento — previsão de formatura em dezembro de 2027.</p>
+      </div>
+    </div>
+
+    <div class="ledger__row">
+      <div class="ledger__date">01/2025 —<br>12/2025</div>
+      <div class="ledger__content">
+        <h3>Aprendizagem Industrial de Operador de Suporte Técnico</h3>
+        <p class="ledger__org">SENAI 6.61 — "Ettore Zanini", Sertãozinho</p>
+        <p>Ensino médio técnico em Computação/Informática.</p>
+      </div>
+    </div>
+
+    <div class="ledger__row">
+      <div class="ledger__date">01/2023 —<br>12/2024</div>
+      <div class="ledger__content">
+        <h3>Técnico em Desenvolvimento de Sistemas</h3>
+        <p class="ledger__org">SENAI 6.61 — "Ettore Zanini", Sertãozinho</p>
+        <p>Ensino médio técnico em Computação/Informática.</p>
+      </div>
+    </div>
+
+    <div class="ledger__subblock">
+      <h3 class="ledger__subtitle">Certificações</h3>
+      <ul class="cert-list">
+        <li><span>2026</span> Administrador de Banco de Dados — IFRS</li>
+        <li><span>2026</span> Programação SAP/ABAP — DH University</li>
+        <li><span>2025</span> Banco de Dados: Oracle PL/SQL — IFRS</li>
+        <li><span>2025</span> OCI AI Foundations Associate (1Z0-1122-25) — Oracle University</li>
+        <li><span>2025</span> Introduction to Generative AI — AWS Educate</li>
+        <li><span>2025</span> Imersão Dados com Python — Alura</li>
+        <li><span>2024</span> Fundamentos de Python — SENAI</li>
+        <li><span>2024</span> Imersão IA — Alura e Google</li>
+        <li><span>2024</span> PHP-POO — Curso em Vídeo</li>
+      </ul>
+    </div>
+
+    <div class="ledger__subblock">
+      <h3 class="ledger__subtitle">Extracurricular</h3>
+      <ul class="cert-list">
+        <li><span>08/2023 — 04/2024</span> Steel Bulls FRC — SESI-CE 241 e SENAI 6.61 "Ettore Zanini"</li>
+        <li><span>07/2018 — 07/2020</span> Ser Robótica — SESI-CE 241, Sertãozinho</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HABILIDADES ================= -->
+<section class="skills" id="habilidades">
+  <h2 class="skills__title">Habilidades &amp; Ferramentas</h2>
+
+  <div class="skills__group">
+    <h3>Banco de dados &amp; consultas</h3>
+    <div class="chip-row">
+      <span class="chip">PostgreSQL</span>
+      <span class="chip">Oracle DB</span>
+      <span class="chip">MySQL</span>
+      <span class="chip">Banco de Dados</span>
+      <span class="chip">Modelagem de Dados</span>
+    </div>
+  </div>
+
+  <div class="skills__group">
+    <h3>Análise &amp; visualização</h3>
+    <div class="chip-row">
+      <span class="chip">Power BI</span>
+      <span class="chip">Excel</span>
+      <span class="chip">DAX</span>
+      <span class="chip">VBA</span>
+      <span class="chip">Análise de Dados</span>
+      <span class="chip">Data Cleaning</span>
+      <span class="chip">Visualização de Dados</span>
+      <span class="chip">Dashboards Interativos</span>
+      <span class="chip">Gateway</span>
+    </div>
+  </div>
+
+  <div class="skills__group">
+    <h3>Programação &amp; automação</h3>
+    <div class="chip-row">
+      <span class="chip">Python</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">Programação Orientada a Objetos</span>
+      <span class="chip">Scripts</span>
+      <span class="chip">Testes Automatizados</span>
+      <span class="chip">API</span>
+      <span class="chip">Gemini</span>
+      <span class="chip">Inteligência Artificial</span>
+      <span class="chip">GitHub</span>
+    </div>
+  </div>
+
+  <div class="skills__group">
+    <h3>Perfil profissional</h3>
+    <div class="chip-row">
+      <span class="chip">Experiência do Usuário</span>
+      <span class="chip">Proatividade</span>
+      <span class="chip">Criatividade</span>
+      <span class="chip">Trabalho em Equipe</span>
+      <span class="chip">Autoaprendizagem</span>
+      <span class="chip">Aprendizado Contínuo</span>
+      <span class="chip">Melhoria Contínua</span>
+    </div>
+  </div>
+
+  <div class="skills__group">
+    <h3>Idioma</h3>
+    <div class="chip-row">
+      <span class="chip">Inglês — Intermediário</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer" id="contato">
+  <div class="site-footer__bar"></div>
+  <div class="site-footer__body">
+    <div class="site-footer__mark">LF</div>
+    <div class="site-footer__info">
+      <h2>Vamos conversar?</h2>
+      <p>Aberta a oportunidades de estágio e projetos em análise de dados, BI e automação.</p>
+    </div>
+    <ul class="site-footer__contacts">
+      <li>
+        <span class="meta-label">E-mail</span>
+        <a href="mailto:leticiaferreirafaria02@gmail.com">leticiaferreirafaria02@gmail.com</a>
+      </li>
+      <li>
+        <span class="meta-label">Telefone</span>
+        <a href="tel:+5516991008439">(16) 99100-8439</a>
+      </li>
+      <li>
+        <span class="meta-label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/let%C3%ADcia-ferreira-faria-a6bb15309/" target="_blank" rel="noopener">/letícia-ferreira-faria</a>
+      </li>
+      <li>
+        <span class="meta-label">GitHub</span>
+        <a href="https://github.com/Le2006faria" target="_blank" rel="noopener">github.com/Le2006faria</a>
+      </li>
+    </ul>
+  </div>
+  <p class="site-footer__legal">Letícia Faria © 2026 · Dados sensíveis exibidos neste portfólio foram bloqueados por sigilo comercial.</p>
+</footer>
+
+</body>
+</html>
